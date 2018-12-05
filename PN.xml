@@ -21,12 +21,12 @@
 <value>1100</value>
 </capacity>
 </place>
-<place id="MÕSTO">
+<place id="M√çSTO">
 <graphics>
 <position x="735.0" y="360.0"/>
 </graphics>
 <name>
-<value>MÕSTO</value>
+<value>M√çSTO</value>
 <graphics>
 <offset x="0.0" y="0.0"/>
 </graphics>
@@ -41,12 +41,12 @@
 <value>0</value>
 </capacity>
 </place>
-<place id="Nov· Borovina">
+<place id="Nov√° Borovina">
 <graphics>
 <position x="510.0" y="240.0"/>
 </graphics>
 <name>
-<value>Nov· Borovina</value>
+<value>Nov√° Borovina</value>
 <graphics>
 <offset x="54.0" y="42.0"/>
 </graphics>
@@ -1019,7 +1019,7 @@
 <value>1</value>
 </priority>
 </transition>
-<arc id="MÕSTO to P = 2" source="MÕSTO" target="P = 2">
+<arc id="M√çSTO to P = 2" source="M√çSTO" target="P = 2">
 <graphics/>
 <inscription>
 <value>Default,1</value>
@@ -1033,7 +1033,7 @@
 <arcpath id="002" x="422" y="251" curvePoint="false"/>
 <type value="normal"/>
 </arc>
-<arc id="MÕSTO to T4" source="MÕSTO" target="T4">
+<arc id="M√çSTO to T4" source="M√çSTO" target="T4">
 <graphics/>
 <inscription>
 <value>Default,1</value>
@@ -1046,7 +1046,7 @@
 <arcpath id="001" x="777" y="267" curvePoint="false"/>
 <type value="normal"/>
 </arc>
-<arc id="Nov· Borovina to T3" source="Nov· Borovina" target="T3">
+<arc id="Nov√° Borovina to T3" source="Nov√° Borovina" target="T3">
 <graphics/>
 <inscription>
 <value>Default,1</value>
@@ -1059,7 +1059,7 @@
 <arcpath id="001" x="606" y="252" curvePoint="false"/>
 <type value="normal"/>
 </arc>
-<arc id="P = 2 to MÕSTO" source="P = 2" target="MÕSTO">
+<arc id="P = 2 to M√çSTO" source="P = 2" target="M√çSTO">
 <graphics/>
 <inscription>
 <value>Default,1</value>
@@ -1073,7 +1073,7 @@
 <arcpath id="002" x="732" y="373" curvePoint="false"/>
 <type value="normal"/>
 </arc>
-<arc id="P = 2 to Nov· Borovina" source="P = 2" target="Nov· Borovina">
+<arc id="P = 2 to Nov√° Borovina" source="P = 2" target="Nov√° Borovina">
 <graphics/>
 <inscription>
 <value>Default,1</value>
