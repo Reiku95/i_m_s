@@ -25,7 +25,7 @@ void generate_garbage_trucks(int count){
 }
 
 void create_test(){
-  Area *n_bor = new Area("Nova Borovina", 5400, 66480.6);
+  Area *n_bor = new Area("Nova Borovina", 5400, 66480.6, 1, id_nova_borovina);
   int bins_places = 10;
   int bins_paper_1100l = 14;
   int bins_plastic_1100l = 18;
@@ -34,12 +34,22 @@ void create_test(){
   int bins_bio_240l = 9;
   n_bor->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
+  Area *s_bor = new Area("Stara Borovina", 3300, 386000, 2, id_stara_borovina);
+  bins_places = 11;
+  bins_paper_1100l = 0;
+  bins_plastic_1100l = 20;
+  bins_glassc_1100l = 11;
+  bins_glassw_1100l = 11;
+  bins_bio_240l = 10;
+  s_bor->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
+
   trebic.push_back(n_bor);
+  trebic.push_back(s_bor);
 }
 
 void create_trebic(){
   // Vytvori oblast Boroviny.
-  Area *n_bor = new Area("Nova Borovina", 5400, 66480.6);
+  Area *n_bor = new Area("Nova Borovina", 5400, 66480.6, 8, id_nova_borovina);
   int bins_places = 10;
   int bins_paper_1100l = 14;
   int bins_plastic_1100l = 18;
@@ -48,7 +58,7 @@ void create_trebic(){
   int bins_bio_240l = 9;
   n_bor->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *s_bor = new Area("Stara Borovina", 3300, 386000);
+  Area *s_bor = new Area("Stara Borovina", 3300, 386000, 4, id_stara_borovina);
   bins_places = 11;
   bins_paper_1100l = 15;
   bins_plastic_1100l = 20;
@@ -57,7 +67,7 @@ void create_trebic(){
   bins_bio_240l = 10;
   s_bor->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *v_mesto = new Area("Vnitrni Mesto", 2500, 200000);
+  Area *v_mesto = new Area("Vnitrni Mesto", 2500, 200000, 2, id_vnitrni_mesto);
   bins_places = 10;
   bins_paper_1100l = 16;
   bins_plastic_1100l = 21;
@@ -66,7 +76,7 @@ void create_trebic(){
   bins_bio_240l = 8;
   v_mesto->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *h_domky = new Area("Horka Domky", 1900, 870000);
+  Area *h_domky = new Area("Horka Domky", 1900, 870000, 1, id_horka_domky);
   bins_places = 27;
   bins_paper_1100l = 38;
   bins_plastic_1100l = 49;
@@ -75,7 +85,7 @@ void create_trebic(){
   bins_bio_240l = 22;
   h_domky->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *n_mesto = new Area("Nove mesto", 3200, 628000);
+  Area *n_mesto = new Area("Nove mesto", 3200, 628000, 3, id_nove_mesto);
   bins_places = 41;
   bins_paper_1100l = 58;
   bins_plastic_1100l = 73;
@@ -84,7 +94,7 @@ void create_trebic(){
   bins_bio_240l = 27;
   n_mesto->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *kopce = new Area("Kopce", 3900, 55958);
+  Area *kopce = new Area("Kopce", 3900, 55958, 5, id_kopce);
   bins_places = 6;
   bins_paper_1100l = 8;
   bins_plastic_1100l = 11;
@@ -93,7 +103,7 @@ void create_trebic(){
   bins_bio_240l = 3;
   kopce->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *hajek = new Area("Hajek", 4100, 344000);
+  Area *hajek = new Area("Hajek", 4100, 344000, 6, id_hajek);
   bins_places = 24;
   bins_paper_1100l = 29;
   bins_plastic_1100l = 36;
@@ -102,7 +112,7 @@ void create_trebic(){
   bins_bio_240l = 11;
   hajek->create_places(bins_places, 0, bins_paper_1100l, 0, bins_plastic_1100l, 0, bins_glassc_1100l, 0, bins_glassw_1100l, bins_bio_240l);
 
-  Area *tyn = new Area("Tyn", 5100, 1240000);
+  Area *tyn = new Area("Tyn", 5100, 1240000, 7, id_tyn);
   bins_places = 27;
   bins_paper_1100l = 35;
   bins_plastic_1100l = 47;
@@ -187,7 +197,7 @@ void test(){
   trebic.clear();
   create_test();
   vozy.clear();
-  generate_garbage_trucks(1);
+  generate_garbage_trucks(2);
 
   print_trebic();
 }
@@ -210,6 +220,7 @@ int main(int argc, char const *argv[]){
       test();
       Run();
       print_final();
+      print_trebic();
     }
     if (0 == std::string("--scenario").compare(argv[i])){
       if (argc > (i + 1)){
