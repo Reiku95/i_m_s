@@ -11,8 +11,8 @@
 #include "area.h"
 
 class Garbage_truck : public Process {
-  
-  public:
+
+public:
     std::string name;
     std::vector<Area *> *city;
 
@@ -42,8 +42,27 @@ class Garbage_truck : public Process {
     float cas_ve_sbernem_dvore;
     float cas_jezdeni_v_oblasti;
     float cas_jezdeni_do_oblasti;
+    int time_spend_way;
+
+    int dump_ways;
+    double time_in_dump;
+
+    int liters_loaded;
+    int weight_loaded;
+    int bins_240_loaded;
+    int bins_1100_loaded;
+    double time_bins_emptying;
+
+    int x_travels_between_areas;
+    int distance_between_areas;
+    double time_between_areas;
+
+    int x_travels_between_places;
+    int distance_between_places;
+    double time_between_places;
 
     Garbage_truck(std::string p_name, std::vector<Area *> *city, int p_capacity);
+    virtual ~Garbage_truck();
     void go_active();
     void go_passive();
     void Behavior();
@@ -63,9 +82,9 @@ class Garbage_truck : public Process {
     void goto_dump(Area *actual_area);
     Area *get_area_by_id(t_id_area id);
 
-  protected:
+protected:
 
-  private:
+private:
 };
 
 #endif // GARBAGE_TRUCK_H

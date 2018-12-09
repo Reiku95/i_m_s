@@ -24,8 +24,6 @@ run:
 	./ims --scenario 2
 	./ims --scenario 3
 	./ims --scenario 4
-	./ims --scenario 5
-	./ims --scenario 6
 
 clean-objects:
 	rm -f *.o

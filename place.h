@@ -8,7 +8,7 @@
 #include "simlib.h"
 
 class Place : public Facility {
-  public:
+public:
     bool finished;
 
     // Pocet popelnic.
@@ -33,6 +33,7 @@ class Place : public Facility {
     int total_bins_bio_240l;
 
     Place();
+    virtual ~Place();
     void set_bins_paper_240l(int num);
     void set_bins_paper_1100l(int num);
     void set_bins_plastic_240l(int num);
@@ -43,9 +44,9 @@ class Place : public Facility {
     void set_bins_glassw_1100l(int num);
     void set_bins_bio_240l(int num);
 
-  protected:
+protected:
 
-  private:
+private:
 };
 
 #endif // PLACE_H

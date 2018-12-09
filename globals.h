@@ -1,7 +1,7 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-#define DEBUG true
+#define DEBUG false
 
 #define GARBAGE_TRUCK_CAPACITY 9000
 
